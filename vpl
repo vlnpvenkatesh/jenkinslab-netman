@@ -15,6 +15,7 @@ pipeline {
             steps {
                 echo "this is stage2"
                 echo "new commit"
+                echo "new commit2"
             }
         }
         
