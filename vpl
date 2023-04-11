@@ -20,6 +20,7 @@ pipeline {
         
         stage('Stage_3 - Running the application') { 
             steps {
+                echo "ala"
                 //sh "sudo python3 /home/venky/Lab9Jenkins/netman_netconf_obj2.py"
             }
         }
