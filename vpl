@@ -13,15 +13,13 @@ pipeline {
 
         stage('Stage_2 - Checking and Fixing Violations') { 
             steps {
-                echo "this is stage2"
-                echo "new commit"
-                echo "new commit2"
+                echo "small change"
             }
         }
         
         stage('Stage_3 - Running the application') { 
             steps {
-                echo "this is stage3"
+                sh "sudo pylint /home/venky/Lab - 9 Jenkins/netman_netconf_obj2.py"
             }
         }
 
