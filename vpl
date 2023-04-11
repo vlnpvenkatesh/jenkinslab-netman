@@ -3,25 +3,27 @@ pipeline {
     stages {
         stage('Stage_1 - Install packages') { 
             steps {
-               sh 'sudo pip install ncclient'
-               sh 'sudo pip install pandas'
-               sh 'sudo pip install ipaddress'
-               sh 'sudo pip install netaddr'
-               sh 'sudo pip install prettytable'
-               sh 'sudo pip install pylint'
+            //    sh 'sudo pip install ncclient'
+            //    sh 'sudo pip install pandas'
+            //    sh 'sudo pip install ipaddress'
+            //    sh 'sudo pip install netaddr'
+            //    sh 'sudo pip install prettytable'
+            //    sh 'sudo pip install pylint'
+               sh 'from netmiko import ConnectHandler
+'
             }
         }
 
         stage('Stage_2 - Checking and Fixing Violations') { 
             steps {
-                
                 sh "sudo python3 /home/venky/Lab9Jenkins/obj2.2.py "
             }
         }
         
         stage('Stage_3 - Running the application') { 
             steps {
-                sh "sudo python3 /home/venky/Lab9Jenkins/netman_netconf_obj2.py"
+                echo "jobaka"
+                // sh "sudo python3 /home/venky/Lab9Jenkins/netman_netconf_obj2.py"
             }
         }
 
