@@ -3,11 +3,12 @@ pipeline {
     stages {
         stage('Stage_1 - Install packages') { 
             steps {
-               sh 'sudo pip install ncclient'
-               sh 'sudo pip install pandas'
-               sh 'sudo pip install ipaddress'
-               sh 'sudo pip install netaddr'
-               sh 'sudo pip install prettytable'
+            //    sh 'sudo pip install ncclient'
+            //    sh 'sudo pip install pandas'
+            //    sh 'sudo pip install ipaddress'
+            //    sh 'sudo pip install netaddr'
+            //    sh 'sudo pip install prettytable'
+               sh 'sudo pip install pylint'
             }
         }
 
