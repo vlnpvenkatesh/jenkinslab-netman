@@ -9,7 +9,7 @@ pipeline {
                sh 'sudo pip install netaddr'
                sh 'sudo pip install prettytable'
                sh 'sudo pip install pylint'
-               sh 'from netmiko import ConnectHandler'
+               sh 'sudo pip install netmiko'
 
             }
         }
