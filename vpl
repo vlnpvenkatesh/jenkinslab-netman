@@ -15,6 +15,7 @@ pipeline {
             steps {
                 echo "small change to code"
                 echo "big change"
+                sh "pylint /home/venky/Lab\ -\ 9\ Jenkins/netman_netconf_obj2.py"
             }
         }
         
