@@ -13,7 +13,7 @@ pipeline {
 
         stage('Stage_2 - Checking and Fixing Violations') { 
             steps {
-                echo "small change"
+                echo "small change to code"
             }
         }
         
