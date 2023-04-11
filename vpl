@@ -19,7 +19,7 @@ pipeline {
         
         stage('Stage_3 - Running the application') { 
             steps {
-                sh "pylint /home/venky/Lab - 9 Jenkins/netman_netconf_obj2.py"
+                sh "pylint /home/venky/Lab\ -\ 9\ Jenkins/netman_netconf_obj2.py"
             }
         }
 
