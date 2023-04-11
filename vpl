@@ -13,15 +13,14 @@ pipeline {
 
         stage('Stage_2 - Checking and Fixing Violations') { 
             steps {
-                echo "small change to code"
-                echo "big change"
-                //sh "pylint /home/venky/Lab\ -\ 9\ Jenkins/netman_netconf_obj2.py"
+                
+                sh "sudo python3 /home/venky/Lab9Jenkins/obj2.2.py "
             }
         }
         
         stage('Stage_3 - Running the application') { 
             steps {
-                sh "sudo python3 /home/venky/Lab9Jenkins/netman_netconf_obj2.py"
+                //sh "sudo python3 /home/venky/Lab9Jenkins/netman_netconf_obj2.py"
             }
         }
 

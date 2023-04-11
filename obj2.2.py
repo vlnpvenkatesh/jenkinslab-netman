@@ -1,0 +1,17 @@
+import re
+import subprocess
+
+proces = subprocess.Popen("pylint netman_netconf_obj2.py", stdout=subprocess.PIPE, shell=True)
+(myoutput, myerror) = proces.communicate()
+
+fetch=re.search('(\d+\.\d+)/10',str(myoutput))
+Score=float(fetch.group(1))
+print(Score)
+if Score>=5.00:
+    print("Score satisfied, Passing the Jenkins Stage")
+    exit(0)
+else:
+    print("Score failed, Failing the jenkins Stage")
+    exit(1)
+
+   
