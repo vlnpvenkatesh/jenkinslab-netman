@@ -35,7 +35,7 @@ pipeline {
     }
     post {
         always {   
-            emailext attachLog: true, body: ' "$PROJECT_NAME" "$BUILD_NUMBER" "$BUILD_STATUS"', subject: '$BUILD_STATUS', to: 'vlnp.venkatesh@colorado.edu'
+            emailext attachLog: true, body: ' "$PROJECT_NAME" "$BUILD_NUMBER" "$BUILD_STATUS"\n PFA', subject: '$BUILD_STATUS', to: 'vlnp.venkatesh@colorado.edu'
         }
     }
 }    
